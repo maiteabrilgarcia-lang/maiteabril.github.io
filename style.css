@@ -28,7 +28,10 @@ body {
   line-height: 1.7;
 }
 
-/* FONDO PRINCIPAL ESTILO TARJETA */
+/* ============================= */
+/* HERO PRINCIPAL                */
+/* ============================= */
+
 .hero {
   min-height: 100vh;
   color: var(--blanco);
@@ -37,32 +40,37 @@ body {
   overflow: hidden;
   background-image: url('fondo-web-maite-sin-logo.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
-}
+  display: flex;
+  flex-direction: column;
 }
 
-/* efecto estrellas doradas */
+/* Capa suave para mejorar lectura */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle, rgba(242, 208, 138, 0.95) 1px, transparent 1.5px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.75) 1px, transparent 1.5px);
-  background-size: 70px 70px, 110px 110px;
-  opacity: 0.35;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 26, 56, 0.02) 0%,
+      rgba(7, 26, 56, 0.04) 35%,
+      rgba(7, 26, 56, 0.20) 100%
+    );
   pointer-events: none;
+  z-index: 0;
 }
 
-/* borde dorado lateral estilo acuarela */
+/* Marco dorado elegante */
 .hero::after {
   content: "";
   position: absolute;
   inset: 18px;
-  border: 1px solid rgba(242, 208, 138, 0.45);
+  border: 1px solid rgba(242, 208, 138, 0.42);
   border-radius: 34px;
   pointer-events: none;
+  z-index: 0;
 }
 
 .nav,
@@ -71,63 +79,104 @@ body {
   z-index: 1;
 }
 
+/* ============================= */
+/* MENÚ SUPERIOR                 */
+/* ============================= */
+
 .nav {
   max-width: 1120px;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.25rem;
-  letter-spacing: 2px;
+  font-size: clamp(1.25rem, 1.9vw, 1.8rem);
+  letter-spacing: 4px;
   color: var(--dorado-claro);
   text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 .nav-link {
   color: var(--blanco);
   text-decoration: none;
-  border: 1px solid rgba(242, 208, 138, 0.7);
-  padding: 9px 18px;
+  border: 1px solid rgba(242, 208, 138, 0.72);
+  padding: 10px 24px;
   border-radius: 999px;
-  background: rgba(7, 26, 56, 0.25);
+  background: rgba(7, 26, 56, 0.24);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 12px 32px rgba(7, 26, 56, 0.20);
 }
+
+/* ============================= */
+/* CONTENIDO PRINCIPAL           */
+/* ============================= */
 
 .hero-content {
-  max-width: 980px;
-  margin: 130px auto 0;
+  max-width: 920px;
+  margin: auto auto 70px;
   text-align: center;
+  padding: 20px 24px;
 }
 
-.eyebrow,
-.small-title {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: var(--dorado-claro);
-  font-size: 0.85rem;
-  margin-bottom: 18px;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: clamp(3.2rem, 8vw, 7rem);
-  line-height: 1;
+.hero .eyebrow {
+  display: inline-block;
+  padding: 9px 26px;
   margin-bottom: 28px;
-  color: var(--blanco);
-  letter-spacing: 10px;
+
+  color: var(--dorado-claro);
+  background: rgba(7, 26, 56, 0.56);
+  border: 1px solid rgba(242, 208, 138, 0.72);
+  border-radius: 999px;
+
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  letter-spacing: 3px;
+  font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 12px 32px rgba(7, 26, 56, 0.32);
+  backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  color: var(--blanco);
+  font-size: clamp(3.4rem, 7.1vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  text-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.44),
+    0 0 24px rgba(255, 255, 255, 0.16);
 }
 
 .hero-text {
-  max-width: 760px;
-  margin: 0 auto 38px;
-  font-size: 1.28rem;
+  max-width: 780px;
+  margin: 0 auto 24px;
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
   color: var(--blanco);
-  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  font-weight: 600;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.48);
 }
+
+.hero-subtext {
+  margin: 0 auto 28px;
+  color: var(--dorado-claro);
+  font-size: clamp(1rem, 1.5vw, 1.28rem);
+  font-weight: 600;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================= */
+/* BOTONES                       */
+/* ============================= */
 
 .hero-buttons {
   display: flex;
@@ -138,7 +187,7 @@ h1 {
 
 .btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 15px 32px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: bold;
@@ -155,15 +204,20 @@ h1 {
   background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
   color: var(--azul-noche);
   border: 1px solid var(--dorado-claro);
+  box-shadow: 0 14px 32px rgba(7, 26, 56, 0.24);
 }
 
 .secondary {
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid var(--dorado-claro);
+  background: rgba(7, 26, 56, 0.16);
+  border: 1px solid rgba(242, 208, 138, 0.72);
   color: var(--blanco);
+  backdrop-filter: blur(5px);
 }
 
-/* SECCIONES */
+/* ============================= */
+/* SECCIONES GENERALES           */
+/* ============================= */
+
 .section {
   max-width: 1120px;
   margin: 0 auto;
@@ -173,6 +227,15 @@ h1 {
 .intro {
   text-align: center;
   max-width: 900px;
+}
+
+.small-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dorado);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  font-weight: bold;
 }
 
 h2 {
@@ -195,7 +258,10 @@ h3 {
   font-size: 1.15rem;
 }
 
-/* TARJETAS DE SERVICIOS */
+/* ============================= */
+/* TARJETAS DE SERVICIOS         */
+/* ============================= */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -225,7 +291,10 @@ h3 {
   color: #263653;
 }
 
-/* SOBRE MÍ */
+/* ============================= */
+/* SOBRE MÍ                      */
+/* ============================= */
+
 .about {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(220, 238, 248, 0.85));
@@ -234,7 +303,10 @@ h3 {
   border: 1px solid rgba(201, 147, 53, 0.35);
 }
 
-/* CTA FINAL */
+/* ============================= */
+/* CTA FINAL                     */
+/* ============================= */
+
 .final-cta {
   text-align: center;
   background:
@@ -249,7 +321,10 @@ h3 {
   background: transparent;
 }
 
-/* PIE */
+/* ============================= */
+/* PIE                           */
+/* ============================= */
+
 footer {
   text-align: center;
   padding: 34px;
@@ -258,18 +333,71 @@ footer {
   letter-spacing: 1px;
 }
 
-/* MÓVIL */
+/* ============================= */
+/* MÓVIL                         */
+/* ============================= */
+
 @media (max-width: 800px) {
   .hero {
+    min-height: 100vh;
     padding: 24px;
+    background-position: center top;
+  }
+
+  .hero::after {
+    inset: 14px;
+    border-radius: 24px;
+  }
+
+  .nav {
+    gap: 18px;
+    padding-top: 4px;
+  }
+
+  .logo {
+    font-size: 1rem;
+    letter-spacing: 2.8px;
+  }
+
+  .nav-link {
+    padding: 8px 16px;
+    font-size: 0.88rem;
   }
 
   .hero-content {
-    margin-top: 100px;
+    margin: auto auto 44px;
+    padding: 16px;
   }
 
-  h1 {
-    letter-spacing: 5px;
+  .hero .eyebrow {
+    padding: 8px 18px;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 4.3rem);
+    letter-spacing: 4px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 310px;
+    text-align: center;
   }
 
   .cards {
@@ -279,37 +407,4 @@ footer {
   .section {
     padding: 70px 24px;
   }
-
-  .nav {
-    gap: 18px;
-  }
-
-  .logo {
-    font-size: 1rem;
-  }
-
-/* FONDO PERSONALIZADO MAITE ABRIL */
-
-.hero {
-  min-height: 100vh;
-  color: var(--blanco);
-  padding: 32px;
-  position: relative;
-  overflow: hidden;
-  background-image: url('fondo-web-maite.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 26, 56, 0.10);
-  pointer-events: none;
-}
-
-.hero::after {
-  content: none;
 }
