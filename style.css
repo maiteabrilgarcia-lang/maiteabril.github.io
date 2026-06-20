@@ -284,7 +284,7 @@ footer {
   .logo {
     font-size: 1rem;
   }
-}
+
 /* FONDO PERSONALIZADO MAITE ABRIL */
 
 .hero {
@@ -293,7 +293,7 @@ footer {
   padding: 32px;
   position: relative;
   overflow: hidden;
-  background-image: url('fondo web maite.png');
+  background-image: url('fondo-web-maite.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
