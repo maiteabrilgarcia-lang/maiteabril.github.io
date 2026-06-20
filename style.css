@@ -285,3 +285,28 @@ footer {
     font-size: 1rem;
   }
 }
+/* FONDO PERSONALIZADO MAITE ABRIL */
+
+.hero {
+  min-height: 100vh;
+  color: var(--blanco);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('fondo web maite.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 26, 56, 0.10);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: none;
+}
