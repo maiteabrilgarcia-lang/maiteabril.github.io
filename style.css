@@ -35,8 +35,11 @@ body {
   padding: 32px;
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at center, rgba(220, 238, 248, 0.95) 0%, rgba(31, 111, 168, 0.75) 34%, rgba(11, 47, 95, 0.95) 68%, rgba(7, 26, 56, 1) 100%);
+  background-image: url('fondo-web-maite.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 }
 
 /* efecto estrellas doradas */
