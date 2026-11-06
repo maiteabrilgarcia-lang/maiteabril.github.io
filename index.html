@@ -3,55 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Maite Abril | Tu energía marca tu ritmo</title>
-
-  <meta 
-    name="description" 
-    content="Maite Abril. Psicología educativa * Productividad * Planificación consciente" 
-  />
-
+  <meta name="description" content="Maite Abril, psicóloga, docente y mentora en bienestar y desarrollo personal. Recursos y acompañamiento para conocerte, cuidarte y vivir con más calma y sentido." />
   <link rel="stylesheet" href="style.css" />
+  <!-- Solo los estilos de la nueva portada; no modifica el resto de la web -->
+  <link rel="stylesheet" href="portada.css" />
 </head>
-
 <body>
-
   <header class="hero">
-
-    <nav class="nav">
+    <nav class="nav" aria-label="Navegación principal">
       <div class="logo">Maite Abril</div>
       <a href="#contacto" class="nav-link">Contactar</a>
     </nav>
 
-    <section class="hero-content">
-      <p class="eyebrow">Psicóloga · Coach · Mentora</p>
-
-      <h1>Ordena tu vida, tu energía y tu forma de acompañar</h1>
-
-      <p class="hero-text">
-        Acompaño a mujeres, madres, docentes y familias a crear más calma, claridad y estructura
-        en su día a día, desde la productividad emocional y la planificación consciente. 
-      </p>
-
-      <p class="hero-subtext">
-        Menos exigencia. Más presencia. Más vida.
-      </p>
-
+    <section class="hero-content" aria-labelledby="titulo-portada">
+      <p class="hero-brand">MAITE ABRIL</p>
+      <p class="eyebrow">Psicóloga · Docente · Mentora en bienestar y desarrollo personal</p>
+      <h1 id="titulo-portada">Tu energía marca tu ritmo</h1>
+      <p class="hero-question">Entre tantas responsabilidades, ¿cuánto espacio queda para ti?</p>
+      <p class="hero-text">Aquí encontrarás recursos y acompañamiento para conocerte mejor, cuidar tu bienestar y vivir con más calma y sentido.</p>
+      <p class="hero-subtext">Menos exigencia. Más presencia. Más vida.</p>
       <div class="hero-buttons">
-        <a href="#contacto" class="btn primary">Quiero empezar</a>
-        <a href="#servicios" class="btn secondary">Ver cómo puedo ayudarte</a>
+        <a href="#recursos" class="btn primary">Descubre mis recursos</a>
+        <a href="#sobre-mi" class="btn secondary">Conóceme</a>
       </div>
     </section>
-
   </header>
 
+  <!-- Se conserva el contenido existente debajo de la portada. Lo revisaremos después. -->
   <main>
-
     <section class="section intro">
       <p class="small-title">Productividad consciente</p>
-
       <h2>No necesitas hacer más. Necesitas volver a ti.</h2>
-
       <p>
         La planificación no tiene por qué sentirse rígida, fría o imposible.
         Puede ser un espacio de calma, claridad y conexión contigo. Un lugar desde el que
@@ -60,7 +43,6 @@
     </section>
 
     <section class="section cards" id="servicios">
-
       <div class="card">
         <h3>Sesiones 1:1</h3>
         <p>
@@ -68,7 +50,6 @@
           desde un lugar más amable, realista y consciente.
         </p>
       </div>
-
       <div class="card">
         <h3>Planificación desde tu energía</h3>
         <p>
@@ -76,34 +57,28 @@
           conectando con lo que de verdad importa para ti.
         </p>
       </div>
-
-      <div class="card">
+      <div class="card" id="recursos">
         <h3>Recursos, talleres y experiencias</h3>
         <p>
           Meditaciones, ejercicios, cartas y espacios de reflexión para reconectar contigo
           y sostener tus sueños con más calma.
         </p>
       </div>
-
     </section>
 
-    <section class="section about">
+    <section class="section about" id="sobre-mi">
       <div>
         <p class="small-title">Sobre mí</p>
-
         <h2>Soy Maite Abril</h2>
-
         <p>
           Soy psicóloga, coach y mentora. Acompaño a mujeres que sienten que tienen muchas
           responsabilidades, muchas ideas y muchas ganas de avanzar, pero que necesitan hacerlo
           sin perder su calma, su energía ni su esencia.
         </p>
-
         <p>
           Mi forma de acompañar une organización, desarrollo personal, espiritualidad práctica
           y una mirada muy humana del ritmo vital.
         </p>
-
         <p>
           Mi mantra es claro: organiza tu vida, vive tus sueños y acuérdate de sonreír.
         </p>
@@ -112,24 +87,17 @@
 
     <section class="section final-cta" id="contacto">
       <p class="small-title">Da el primer paso</p>
-
       <h2>Empieza a organizar tu vida desde tu energía</h2>
-
-      <p>
-        Escríbeme y vemos juntas cuál es el mejor punto de partida para ti.
-      </p>
-
+      <p>Escríbeme y vemos juntas cuál es el mejor punto de partida para ti.</p>
       <div class="hero-buttons">
         <a href="https://wa.me/34690182977" class="btn primary">Escríbeme por WhatsApp</a>
         <a href="https://www.instagram.com/maiteabril.psicologa" class="btn secondary">Instagram</a>
       </div>
     </section>
-
   </main>
 
   <footer>
     <p>© Maite Abril · Tu energía marca tu ritmo</p>
   </footer>
-
 </body>
 </html>
