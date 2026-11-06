@@ -1,0 +1,266 @@
+/* ==========================================================
+   PORTADA MAITE ABRIL - Acuarela botánica azul atlántico
+   Se carga DESPUÉS de style.css para conservar el resto de la web.
+   No modificar CNAME ni la configuración de GitHub Pages.
+   ========================================================== */
+
+.hero {
+  min-height: 94vh;
+  min-height: 94svh;
+  padding: 24px clamp(18px, 3vw, 48px) 34px;
+  color: #103b5b;
+  background-color: #e1f0f8;
+  background-image: url("fondo-portada-atlantico.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Desactivamos el sombreado oscuro y el marco del diseño anterior. */
+.hero::before,
+.hero::after {
+  display: none;
+}
+
+.hero .nav {
+  width: 100%;
+  max-width: 1160px;
+  padding-top: 2px;
+}
+
+.hero .logo {
+  color: #103b5b;
+  text-shadow: none;
+  letter-spacing: 0.14em;
+  font-size: clamp(1.08rem, 1.75vw, 1.55rem);
+}
+
+.hero .nav-link {
+  color: #103b5b;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(35, 86, 115, 0.38);
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+}
+
+.hero .nav-link:hover,
+.hero .nav-link:focus-visible {
+  background: #ffffff;
+}
+
+.hero .hero-content {
+  width: 100%;
+  max-width: 1040px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 22px 64px;
+}
+
+/* Nombre central como en la composición aprobada. */
+.hero .hero-brand {
+  color: #0b3b5b;
+  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero .hero-brand::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 14px auto 0;
+  border-radius: 100%;
+  background: #be8a3f;
+}
+
+.hero .eyebrow {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto 28px;
+  padding: 0;
+  color: #184a6c;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  text-shadow: none;
+  text-transform: none;
+  font-size: clamp(0.88rem, 1.25vw, 1.04rem);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.075em;
+}
+
+.hero h1 {
+  max-width: 1010px;
+  margin: 0 auto 28px;
+  color: #0b3b5b;
+  font-size: clamp(2.65rem, 5.4vw, 5.5rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  text-shadow: none;
+  text-wrap: balance;
+}
+
+.hero .hero-question {
+  max-width: 930px;
+  margin: 0 auto 22px;
+  color: #0b3b5b;
+  font-size: clamp(1.22rem, 2.1vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.hero .hero-text {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  color: #204d69;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: none;
+}
+
+.hero .hero-subtext {
+  margin: 0 auto 32px;
+  color: #9a6927;
+  font-size: clamp(1.08rem, 1.8vw, 1.38rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.4;
+  text-shadow: none;
+}
+
+.hero .hero-buttons {
+  gap: 18px;
+}
+
+.hero .btn {
+  padding: 14px 28px;
+  box-shadow: none;
+}
+
+.hero .btn.primary {
+  color: #113a55;
+  background: #e3bb75;
+  border: 2px solid #bb8732;
+}
+
+.hero .btn.secondary {
+  color: #113a55;
+  background: rgba(255, 255, 255, 0.86);
+  border: 2px solid #bb8732;
+}
+
+.hero .btn:hover,
+.hero .btn:focus-visible {
+  box-shadow: 0 10px 25px rgba(15, 53, 79, 0.15);
+}
+
+.hero .btn:focus-visible,
+.hero .nav-link:focus-visible {
+  outline: 3px solid #0b3b5b;
+  outline-offset: 3px;
+}
+
+/* Portada adaptable a pantallas pequeñas. */
+@media (max-width: 800px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 18px 16px 22px;
+    background-position: center;
+  }
+
+  /* La imagen horizontal se recorta en móvil: suavizamos el centro. */
+  .hero::before {
+    display: block;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .hero .nav {
+    gap: 12px;
+  }
+
+  .hero .logo {
+    font-size: 1.04rem;
+    letter-spacing: 0.09em;
+  }
+
+  .hero .nav-link {
+    padding: 8px 14px;
+    font-size: 0.88rem;
+  }
+
+  .hero .hero-content {
+    margin: 0 auto;
+    padding: 60px 4px 58px;
+  }
+
+  .hero .hero-brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 16px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 22px;
+    font-size: 0.82rem;
+    letter-spacing: 0.025em;
+  }
+
+  .hero h1 {
+    margin-bottom: 22px;
+    font-size: clamp(2.45rem, 9.3vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero .hero-question {
+    margin-bottom: 16px;
+    font-size: clamp(1.18rem, 4.9vw, 1.6rem);
+  }
+
+  .hero .hero-text {
+    margin-bottom: 18px;
+    font-size: 1rem;
+  }
+
+  .hero .hero-subtext {
+    margin-bottom: 26px;
+    font-size: 1.06rem;
+  }
+
+  .hero .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero .btn {
+    width: min(100%, 320px);
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+/* También en móviles pequeños el texto conserva aire suficiente. */
+@media (max-width: 370px) {
+  .hero h1 { font-size: 2.32rem; }
+  .hero .eyebrow { font-size: 0.77rem; }
+  .hero .hero-content { padding-top: 46px; padding-bottom: 46px; }
+}
